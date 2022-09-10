@@ -31,9 +31,8 @@ def ej3():
     busca_tornillos = list(csv.DictReader(csvfile))
     
     suma_tornillos = 0
-
     for articulo in busca_tornillos:
-        suma_tornillos = suma_tornillos + int(articulo['tornillos'])
+        suma_tornillos += int(articulo['tornillos'])
     
     print('El stock de tornillos es:', suma_tornillos)
     csvfile.close()
@@ -70,11 +69,9 @@ def ej4():
             cantidad_ambientes = int(row.get('ambientes'))
             
             if cantidad_ambientes == 2:
-                suma_2ambientes = suma_2ambientes + 1
-            
+                suma_2ambientes += 1
             elif cantidad_ambientes == 3:
-                suma_3ambientes = suma_3ambientes + 1
-
+                suma_3ambientes += 1
         except:
             continue
             
