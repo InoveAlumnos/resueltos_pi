@@ -13,7 +13,6 @@
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
 # Ejercicios con funciones y módulos
-from itertools import count
 import random
 
 '''
