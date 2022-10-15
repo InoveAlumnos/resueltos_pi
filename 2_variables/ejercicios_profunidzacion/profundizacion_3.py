@@ -2,7 +2,7 @@
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -33,23 +33,45 @@ Les dejamos el siguiente link que posee casos de uso de algunos de ellos:
 Link de referencia:
 https://www.geeksforgeeks.org/isupper-islower-lower-upper-python-applications/
 
-Cualquier duda con estos métodos pueden consultarla por el campus
+¡Cualquier duda con estos métodos pueden consultarnos!
+
+Alumno:
+- Crear una una variable llamada nombre_completo
+  para almacenar el nombre completo que usted
+  debe ingresar por consola con la función input.
+  Imprimir en consola el contenido de esta variable
+
+- Crear una variable llamada nombre_lower
+  para almacenar el nombre completo con todas
+  las letras transformadas a minúsculas
+  por la función lower
+  Imprimir en consola el contenido de esta variable
+
+- Crear una variable llamada nombre_upper
+  para almacenar el nombre completo con todas
+  las letras transformadas a mayúsculas
+  por la función upper
+  Imprimir en consola el contenido de esta variable
+
+- Crear una variable llamada nombre_capitalize
+  para almacenar el nombre completo con
+  la primera letra del nombre en mayúscula
+  por la función capitalize
+  Imprimir en consola el contenido de esta variable
+
 '''
 
 print('Ahora si! buena suerte')
 # Empezar aquí la resolución del ejercicio
-# Solicitud de nombre completo (nombre y apellido).
-nombre_completo = str(input ("Escriba aquí su nombre completo (nombre y apellido):"))
 
-# Aplicación del método lower e impresión del resultado.
-# Se aplica el método lower directamente sobre la variable nombre_completo.
-print (nombre_completo.lower())
+nombre_completo = str(input ("Ingrese un nombre y apellido:"))
+print(nombre_completo)
 
-# Aplicación del método upper e impresión del resultado.
-# Se crea una variable en la que se aplica el método upper a la variable nombre_completo.
-# Se imprime la variable creada.
-nombre_completo_upper = nombre_completo.upper()
-print (nombre_completo_upper)
+nombre_lower = nombre_completo.lower()
+print(nombre_lower)
 
-# Aplicación del método capitalize e impresión del resultado.
-print (nombre_completo.capitalize())
+nombre_upper = nombre_completo.upper()
+print(nombre_upper)
+
+nombre_capitalize = nombre_completo.capitalize()
+print(nombre_capitalize)

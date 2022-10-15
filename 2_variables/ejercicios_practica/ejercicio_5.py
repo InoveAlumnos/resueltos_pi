@@ -10,18 +10,22 @@
 # Ejemplos variables de texto
 
 # Ingrese dos palabras y arme combinaciones con ella
-print('Ingrese palabra 1:')
-palabra_1 = str(input())
+palabra_1 = str(input('Ingrese palabra 1:'))
 
-print('Ingrese palabra 2:')
-palabra_2 = str(input())
+palabra_2 = str(input('Ingrese palabra 2:'))
 
-# De la primera palabra tome las primeras tres letras, utilice el operador :
-# De la segunda palabra tome las primeras dos letras, utilice el operador :
-# Formar una nueva palabra con los recortes solicitados
-# Imprima en pantalla los resultados
-corte_palabra_1 = palabra_1[:3]
-corte_palabra_2 = palabra_2[:2]
-palabra_combinada = corte_palabra_1 + corte_palabra_2
+# Objetivo:
+# De la primera palabra tome las primeras tres letras,
+# utilice el operador dos puntos :
+# De la segunda palabra tome las primeras dos letras
+# utilice el operador dos puntos 
 
-print ("Nueva palabra:", palabra_combinada)
+# Alumno:
+# Crear una variable llamada palabra_combinada
+# con los recortes solicitados de las variables
+# palabra_1 y palabra_2 en el orden correspondiente
+
+palabra_combinada = palabra_1[:3] + palabra_2[:2]
+
+# Imprima en pantalla la variable palabra_combinada
+print(palabra_combinada)

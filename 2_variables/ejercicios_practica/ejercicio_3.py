@@ -2,27 +2,33 @@
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
 # Ejemplos variables de texto
 
-# Ingrese primero su nombre y luego su apellido
-# Capture ambos datos e imprima su nombre completo
-print('Ingrese por consola su nombre/s:')
-nombre = str(input())
+# Ingrese su primer nombre y luego su primer apellido
+nombre = str(input('Ingrese por consola su primer nombre:'))
 
-print('Ingrese por consola su apellido/s:')
-apellido = str(input())
+apellido = str(input('Ingrese por consola su primer apellido:'))
 
-# Imprima su nombre completo
+# Alumno: Imprima en pantalla su nombre y apellido
+# utilizando las variables nombre y apellido
 print ("Nombre completo:", nombre, apellido)
 
-# Almacenar su nombre completo en una variable
-nombre_completo = nombre + " " + apellido
+# Crear una variable llamada nombre_apellido donde se 
+# almacene el contenido de las variables nombre y apellido
+# separando con un nespacio su nombre de su apellido
 
-# Imprimir la cantidad de letras que posee su nombre completo
-cantidad_letras = len(nombre_completo) 
-print ("Su nombre", nombre_completo, "tiene", cantidad_letras, "letras con espacio incluido")
+nombre_apellido = nombre + " " + apellido
+
+# Crear una variable llamada cantidad donde se
+# almacene la cantidad de caracteres que posee la variable
+# nombre_apellido utilizando la función len
+
+cantidad = len(nombre_apellido)
+
+# Imprimir en pantalla la variable cantidad
+print(cantidad)

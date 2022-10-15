@@ -2,7 +2,7 @@
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -15,46 +15,53 @@
 # Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un calculadora, se ingresará por línea de comando dos
-números reales y se deberá calcular todas las operaciones entre ellos:
-A) Suma
-B) Resta
-C) Multiplicación
-D) División
-E) Exponente/Potencia
+- El objetivo será realizar un calculadora,
+- Se ingresará por consola dos números decimales (float)
+- Se deberá calcular todas las operaciones entre ellos:
+A) Suma  --> primero número más el segundo    
+B) Resta --> primero número menos el segundo
+C) Multiplicación --> primero número por el segundo
+D) División --> primero número dividido el segundo
+E) Exponente/Potencia --> primero número exponente el segundo
 
-- Para todos los casos se debe imprimir en pantalla el resultado aclarando
-  la operación realizada en cada caso y con que números
-  se ha realizado la operación
-  ej: La suma entre 4.2 y 6.5 es 10.7
+- Para todos los casos se debe imprimir en pantalla
+  el resultado de la operación realizada
+
+Alumno:
+- Crear una una variable llamada numero_1
+  para almacenar el primer número decimal que usted
+  debe ingresar por consola con la función input
+
+- Crear una una variable llamada numero_2
+  para almacenar el primer número decimal que usted
+  debe ingresar por consola con la función input
+
+- Almacenar el valor de cada operación realizada en las
+  variables que usted creará con los siguientes nombres:
+  suma, resta, multiplicacion, division, potencia
+
+- Al final imprimir todos los resultados almacenados
+  en esas variables
 '''
 
 print('¡Nuestra primera calculadora!')
 # Empezar aquí la resolución del ejercicio
+
 # Solicitud de dos números.
-print ("Ingrese el primer número:")
-numero_1 = float(input ())
+numero_1 = float(input("Ingrese el primer número:"))
 
-print ("Ingrese el segundo número:")
-numero_2 = float(input ())
+numero_2 = float(input("Ingrese el segundo número:"))
 
-# Cálculo e impresión de la suma entre los números introducidos.
+# Cálculo de todas las operaciones indicadas
 suma = numero_1 + numero_2
-print ("La suma entre", numero_1, "y", numero_2, "es:", suma)
-
-# Cálculo e impresión de la resta entre los dos números.
 resta = numero_1 - numero_2
-print ("La resta entre", numero_1, "y", numero_2, "es:", resta)
-
-# Cálculo e impresión de la multiplicación entre los dos números.
-producto = numero_1 * numero_2
-print ("El producto entre", numero_1, "y", numero_2, "es:", producto)
-
-# Cálculo e impresión de la división entre los dos números.
-cociente = numero_1 / numero_2
-print ("El cociente entre", numero_1, "y", numero_2, "es:", cociente)
-
-# Cálculo e impresión de una potencia.
-# El primer número es la base y el segundo el exponente.
+multiplicacion = numero_1 * numero_2
+division = numero_1 / numero_2
 potencia = numero_1 ** numero_2
+
+# Imprimir todos los resultados:
+print ("La suma entre", numero_1, "y", numero_2, "es:", suma)
+print ("La resta entre", numero_1, "y", numero_2, "es:", resta)
+print ("El producto entre", numero_1, "y", numero_2, "es:", multiplicacion)
+print ("El cociente entre", numero_1, "y", numero_2, "es:", division)
 print (numero_1, "elevado a", numero_2, "es:", potencia)
