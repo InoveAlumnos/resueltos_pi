@@ -2,7 +2,7 @@
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
@@ -10,72 +10,64 @@
 # Ejemplos variables de texto
 
 # Comparadores
-# Ingrese dos palabras cualesquiera y realice las sigueintes
-# comparaciones entre ellas
-texto_1 = str(input('Ingrese la primera palabra:\n').lower())
+# Objetivo:
+# Ingrese dos palabras cualesquiera
+# y realice las sigueintes comparaciones entre ellas
+texto_1 = str(input('Ingrese la primera palabra:\n'))
 
-texto_2 = str(input('Ingrese la segunda palabra:\n').lower())
+texto_2 = str(input('Ingrese la segunda palabra:\n'))
 
-'''
-Al final del input agregué el método lower porque sin hacer
-esa modificación, al comparar la misma palabra escrita una
-vez con mayúscula inicial y la otra toda en minúscula (ej.
-Argentina y argentina) se ordenaba alfabéticamente poniendo
-primero la escrita con mayúscula.
-Algo similar ocurría con dos palabras distintas que comenzaran
-con la misma letra, pero una de ellas con mayúscula inicial y
-la otra con minúscula (ej. Rumbo y rumba). sin el método lower
-el programa ordenaba "Rumbo" y después "rumba", siendo que van
-al revés.
-'''
+# Alumno
+# En cada desafio se le indicará que dada cierta condición
+# modifique el valor de una variable o la cree con ese valor
 
-# Compare cual de las dos palabras es mayor (alfabéticamente)
-# Imprima en pantalla según corresponda
-if texto_1 < texto_2:
-   print(f'{texto_1} precede en el orden alfabético a {texto_2}.')
-elif texto_1 > texto_2:
-    print(f'{texto_2} precede en el orden alfabético a {texto_1}.')
+# Compare las dos palabras y entre sí 
+# utilizando if y else.
+# - Si texto_1 es mayor (alfabéticamente) a texto_2, 
+#   almacenar 1 en res_1
+# - De lo contrario, almacenar 2 en res_1
+if texto_1 > texto_2:
+    res_1 = 1
+    print(f'{texto_1} es mayor alfabeticamente a {texto_2}.')
 else:
-    print(f'Ingresó dos veces la misma palabra.')
+    res_1 = 2
+    print(f'{texto_2} es mayor alfabeticamente a {texto_1}.')
+
+
+# Imprimir en pantalla la variable res_1
+print(res_1)
 
 # Compare cual de las dos palabras tiene mayor
 # cantidad de letras
-# Imprima en pantalla según corresponda
+# Utilice if, elif y else
+# - Si texto_1 tiene más letras, almacenar 1 en res_2
+# - Si texto_2 tiene más letras, almacenar 2 en res_2
+# - Si tienen la misma cantidad de letras, almacenar 3 en res_2
 if len(texto_1) > len(texto_2):
+    res_2 = 1
     print(f'{texto_1} tiene más letras que {texto_2}.')
 elif len(texto_1) < len(texto_2):
+    res_2 = 2
     print(f'{texto_2} tiene más letras que {texto_1}.')
 else:
+    res_2 = 3
     print(f'{texto_1} y {texto_2} tienen la misma cantidad de letras.')
+
+# Imprimir en pantalla la variable res_2
+print(res_2)
+
 
 # Verifique si la primera letra de la primera palabra
 # es mayor a la primera letra de la segunda palabra
-# Imprima en pantalla según corresponda
-
-# Las siguientes variables toman como valor la primera letra de cada palabra.
-inicial_texto_1 = texto_1[0] 
-inicial_texto_2 = texto_2[0]
-
-if inicial_texto_1 > inicial_texto_2:
+# - Si la primera letra de texto_1 es mayor,
+#   almacenar 1 en res_3
+# - De lo contrario, almacenar 2 en res_3
+if texto_1[0] > texto_2[0]:
+    res_3 = 1
     print(f'La primera letra de {texto_1} es mayor que la primera letra de {texto_2}.')
-elif inicial_texto_1 < inicial_texto_2:
-    print(f'La primera letra de {texto_2} es mayor que la primera letra de {texto_1}.')
 else:
-    print(f'Las iniciales de {texto_1} y {texto_2} son la misma letra.')
+    res_3 = 2
+    print(f'La primera letra de {texto_1} no es mayor que la primera letra de {texto_2}.')
 
-copia_texto_1 = texto_1  # Copia de la variable texto_1
-
-# Verifique que copia_texto_1 es igual a texto_1
-# Imprima en pantalla según corresponda
-
-if copia_texto_1 == texto_1:
-    print(f'Se verifica que {copia_texto_1} es igual a {texto_1}.')
-
-# Verifique que copia_texto_1 es distinta a texto_2
-# Imprima en pantalla según corresponda
-
-if copia_texto_1 != texto_2:
-    print(f'Se verifica que {copia_texto_1} es distinto a {texto_2}.')
-else:
-    print(f'{copia_texto_1} es igual a {texto_2}.')
-    
+# Imprimir en pantalla la variable res_3
+print(res_3)
