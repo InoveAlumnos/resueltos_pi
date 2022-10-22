@@ -2,7 +2,7 @@
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -15,23 +15,46 @@
 # Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que solicite por consola 2 números
-Calcule la diferencia entre ellos e informe por pantalla
-si el resultado es positivo, negativo o cero.
+- Realizar un programa que solicite por consola 2 números
+- Calcule la diferencia entre ellos
+- Informe si el resultado es positivo, negativo o cero.
+
+Alumno:
+- Crear una una variable llamada numero_1
+  para almacenar el primer número entero que usted
+  debe ingresar por consola con la función input
+
+- Crear una una variable llamada numero_2
+  para almacenar el primer número entero que usted
+  debe ingresar por consola con la función input
+
+- Calcular la diferencia entre ambos números
+  y almacenar el resultado en una variable
+
+- Utilizando if elif y else compare el resutaldo
+-> Si el resultado es positivo, almacenar 1 en res_1
+-> Si el resultado es negativo, almacenar 2 en res_1
+-> Si el resultado es cero, almacenar 3 en res_1
+
+- Al final imprimir en pantalla la variable res_1
 '''
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-numero_1 = float(input ("Ingrese el primer número:"))
-numero_2 = float(input ("Ingrese el segundo número:"))
+numero_1 = int(input ("Ingrese el primer número:\n"))
+numero_2 = int(input ("Ingrese el segundo número:\n"))
 
 diferencia = numero_1 - numero_2
 
 if diferencia > 0:
+    res_1 = 1
     print(f'{numero_1} - {numero_2} = {diferencia} -> positivo.')
 elif diferencia < 0:
+    res_1 = 2
     print(f'{numero_1} - {numero_2} = {diferencia} -> negativo.')
 else:
+    res_1 = 3
     print(f'{numero_1} - {numero_2} = {diferencia} -> cero.')
-    
+
+print(res_1)

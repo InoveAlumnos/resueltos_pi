@@ -2,7 +2,7 @@
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -14,36 +14,71 @@
 
 # Ejercicios de práctica con números
 '''
-Enunciado:
-Realice un programa que solicite el ingreso de tres números
-enteros, y luego en cada caso informe si el número es par
-o impar.
-Para cada caso imprimir el resultado en pantalla.
+Objetizo:
+Realizar un programa que solicite ingresar
+tres valores decimales de temperatura
+De las temperaturas ingresadas se determinará:
+1 - ¿Cuáles de ellas es la máxima temperatura ingresada?
+2 - ¿Cuáles de ellas es la mínima temperatura ingresada?
+
+IMPORTANTE: Para ordenar las temperatuas debe utilizar condicionales compuestos o anidados,
+no se busca utilizar bucles o algoritmos de ordenamiento ya que aún no hemos llegado a ese
+contenido. Recomendamos pensar bien este problema de lógica con un lápiz y papel.
+
+Alumno:
+- Deberá solicitar tres números decimales por consola,
+cada nuḿero de temperatura lo debe almacenar
+en variables llamadas:
+-> temperatura_1
+-> temperatura_2
+-> temperatura_3
+
+Luego, mediante el uso de condicionales, deberá determinar
+cuales de ellas es la mayor temperatura. Deberá almacenar
+el valor de la temperatura más alta en una nueva variable
+llamada:
+--> temperatura_max
+
+Luego, mediante el uso de condicionales, deberá determinar
+cuales de ellas es la menor temperatura. Deberá almacenar
+el valor de la temperatura más baja en una nueva variable
+llamada:
+--> temperatura_min
+
+- Al final imprimir en pantalla la variable temperatura_max
+  y temperatura_min
 '''
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
 
-# Introducción de tres número enteros.
-numero_1 = int(input('Ingrese el primer número:'))
-numero_2 = int(input('Ingrese el segundo número:'))
-numero_3 = int(input('Ingrese el tercer número:'))
+# Ingreso de tres temperaturas:
+temperatura_1 = float(input('Ingrese la primera temperatura:\n'))
+temperatura_2 = float(input('Ingrese la segunda temperatura:\n'))
+temperatura_3 = float(input('Ingrese la tercera temperatura:\n'))
 
-# Determinación de la condición par o impar del primer número.
-if numero_1 % 2 == 0:
-    print(f'{numero_1} es par.')
-else:
-    print(f'{numero_1} es impar.')
 
-# Determinación de la condición par o impar del segundo número.
-if numero_2 % 2 == 0:
-    print(f'{numero_2} es par.')
+# Determinación de la temperatura máxima.
+if temperatura_1 > temperatura_2 and temperatura_1 > temperatura_3:
+    temperatura_max = temperatura_1
+    print (f'La temperatura máxima fue de {temperatura_1}ºC.')
+elif temperatura_2 > temperatura_3:
+    temperatura_max = temperatura_2
+    print (f'La temperatura máxima fue de {temperatura_2}ºC.')
 else:
-    print(f'{numero_2} es impar.')
+    temperatura_max = temperatura_3
+    print (f'La temperatura máxima fue de {temperatura_3}ºC.')
 
-# Determinación de la condición par o impar del tercer número.
-if numero_3 % 2 == 0:
-    print(f'{numero_3} es par.')
+# Determinación de la temperatura mínima.
+if temperatura_1 < temperatura_2 and temperatura_1 < temperatura_3:
+    temperatura_min = temperatura_1
+    print (f'La temperatura mínima fue de {temperatura_1}ºC.')
+elif temperatura_2 < temperatura_3:
+    temperatura_min = temperatura_2
+    print (f'La temperatura mínima fue de {temperatura_2}ºC.')
 else:
-    print(f'{numero_3} es impar.')
-    
+    temperatura_min = temperatura_3
+    print (f'La temperatura mínima fue de {temperatura_3}ºC.')
+
+print(f'Temperatura máxima {temperatura_max}ºC')
+print(f'Temperatura mínima {temperatura_min}ºC')
