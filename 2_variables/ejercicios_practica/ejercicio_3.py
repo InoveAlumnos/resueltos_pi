@@ -14,7 +14,8 @@ nombre = str(input('Ingrese por consola su primer nombre:'))
 
 apellido = str(input('Ingrese por consola su primer apellido:'))
 
-# Alumno: Imprima en pantalla su nombre y apellido
+# Alumno:
+# Imprima en pantalla su nombre y apellido
 # utilizando las variables nombre y apellido
 print ("Nombre completo:", nombre, apellido)
 

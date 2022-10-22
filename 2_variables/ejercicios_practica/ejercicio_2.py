@@ -19,9 +19,11 @@ numero_2 = int(input('Ingrese por consola el segundo número entero a operar:'))
 # print(....)
 print ("Los números que Usted ingresó son", numero_1, "y", numero_2)
 
-# Alumno: Calcule la suma, resta, división y multiplicación
+# Objetivo:
+# Calcular la suma, resta, división y multiplicación
 # de los números ingresados numero_1, numero_2
 
+# Alumno:
 # Crear una variable llamada suma donde se 
 # almacene el valor de la suma de las variable numero_1 y numero_2
 suma = numero_1 + numero_2
