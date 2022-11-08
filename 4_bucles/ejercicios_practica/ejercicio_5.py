@@ -34,6 +34,6 @@ for temperatura in temperaturas:
     if temperatura > 25:
         mayores_25 += 1
 
-# Imprimir en pantalla la variable temperaturas
-# La cantidad de temperaturas a 25 deberá ser 3
+# Imprimir en pantalla la variable mayores_25
+# La cantidad de temperaturas mayores a 25 deberá ser 3
 print(mayores_25)
