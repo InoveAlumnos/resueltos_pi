@@ -9,7 +9,12 @@
 
 # Ejercicios con funciones
 
+# Objetivo:
+# Crear una función que ordene los números ingresados
+# dentro de una lista.
+
 # --------------------------------
+# Alumno:
 # Aquí dentro definir la función ordenar
 # def ordenar(lista):
 def ordenar(lista):
@@ -34,7 +39,9 @@ if __name__ == '__main__':
     # Dentro de la función puede ordenar la lista
     # usando la funciones nativas de Python "sorted"
 
-    # Luego de crear la función invocarla en este lugar:
+    # Luego de crear la función invocarla en este lugar,
+    # almacenar el valor de retorno en una variable
+    # llamada "lista_ordenada"
 
     # lista_ordenada = ordenar(numeros)
     lista_ordenada = ordenar(numeros)

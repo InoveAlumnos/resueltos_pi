@@ -9,6 +9,10 @@
 
 # Ejercicios con funciones
 
+# Objetivo:
+# Completar el funcionamiento de la función "promedio", evitar
+# que el sistema explote si la lista de numeros entregada es vacia
+
 def promedio(lista):
     print("Funcion promedio")
     resultado = 0
@@ -25,14 +29,16 @@ def promedio(lista):
 
     # La función debe retornar (return) el promedio calculado
     # La función debe contemplar si se le pasa una lista vacia
-    # (es decir, de "0" elementos)
+    # (es decir, de "0" elementos), en ese caso se debe
+    # retornar como promedio 0 y evitar que explote el programa
+
     sumatoria_numeros = sum(lista)
     cantidad_numeros = len(lista)
 
     if cantidad_numeros != 0:
         resultado = sumatoria_numeros / cantidad_numeros
     else:
-        resultado = 'Lista vacía. No es posible calcular promedio.'
+        resultado = 0
 
     return resultado
 
@@ -42,9 +48,9 @@ if __name__ == '__main__':
     
     numeros = [2, 4, 6, 8, 10, 12]
 
-    # Alumno: Complete la función "promedio"
-
+    # Alumno:
     # Llamar a la función en este lugar y capturar el valor del retorno
+    # en una variable llamada resultado_promedio
     resultado_promedio = promedio(numeros)
 
     # Luego imprimir en pantalla el valor resultante:

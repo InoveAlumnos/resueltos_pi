@@ -9,13 +9,17 @@
 
 # Ejercicios con funciones
 
+# Objetivo: Crear una función que pida valores
+# por consola
+
 # --------------------------------
+# Alumno:
 # Aquí dentro definir la función que solicitará
 # el nombre de tres invitados
 # def generar_invitados():
 def generar_invitados():
     invitados = []
-    for i in range(3):
+    for _ in range(3):
         invitado = str(input('Ingrese el nombre del invitado:')).capitalize()
         invitados.append(invitado)
         
@@ -38,8 +42,8 @@ if __name__ == '__main__':
     # Los tres nombres ingresados se deberán guardar en
     # una lista
 
-    # La función generar_invitados deberá retornar
-    # la lista de invitados generados
+    # la lista de invitados generados, el valor de retorno
+    # se debe almacenar en una variable llamada "lista_invitados"
 
     # NOTA: Recomendamos utilizar bucles para no repetir código
     # y solicitar los 3 invitiados, uno en cada iteración del bucle

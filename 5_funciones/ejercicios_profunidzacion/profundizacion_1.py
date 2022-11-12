@@ -2,7 +2,7 @@
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
-# Version: 2.2
+# Version: 3.0
 
 # NOTA: 
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
@@ -17,8 +17,7 @@ import random
 
 '''
 Enunciado:
-Alumno: Crear la función "lista_aleatoria"
-
+Crear la función "lista_aleatoria"
 Para este ejercicio utilizaremos el módulo random
 Ejemplo de como obtener un numero aleatorio
 entre inicio y fin
@@ -29,14 +28,15 @@ NOTA: Esta función ya se utilizó en uno de los ejemplos de clase
 Documentación oficial de random
 https://docs.python.org/3.7/library/random.html
 
-Realice una funcion llamada "lista_aleatoria" (fuera del block main)
+Alumno:
+- Realice una funcion llamada "lista_aleatoria" (fuera del blocke main)
 la cual reciba como parámetro el rango de aceptación de la lista
 "inicio y fin" y la cantidad de elementos que deseamos que
 contenga la lista, es decir, la cantidad de elementos random a generar.
 
 def lista_aleatoria (inicio, fin, cantidad)
 
-Para ello dentro de la función deberá realizar un bucle que repita "cantidad"
+- Dentro de la función deberá realizar un bucle que repita "cantidad"
 veces esta operacion:
 numero = random.randint(inicio, fin)
 
@@ -51,7 +51,7 @@ Finalmente dicha función debe retornar la lista de elementos random generados.
 # Aquí dentro definir la función lista_aleatoria
 def lista_aleatoria(inicial, final, cantidad):
     lista = []
-    for i in range(cantidad):
+    for _ in range(cantidad):
         numero = random.randint(inicial, final)
         lista.append(numero)
 
