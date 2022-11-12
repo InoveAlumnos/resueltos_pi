@@ -2,86 +2,66 @@
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
-# Version: 2.0
+# Version: 3.0
 
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
-# Ejercicios con archivos
+# Ejercicios con diccionarios
 
 import csv
 
 
-def ej3():
-    print('Ejercicio de archivos CSV 1º')
-    archivo = 'stock.csv'
+def desafio():
+    print('Ejercicio con diccionarios como base de datos')
+    # Utilizaremos el diccionario como una base de datos. 
+    # Comenzaremos con un diccionario de stock
+    # de nuestros productos en cero:
     
-    # Realice un programa que abra el archivo 'stock.csv'
-    # en modo lectura y cuente el stock total de tornillos
-    # a lo largo de todo el archivo, 
-    # sumando el stock en cada fila del archivo
+    stock = {'tornillos': 0, 'tuercas': 0, 'arandelas': 0}
 
-    # Para eso debe leer los datos del archivo
-    # con "csv.DictReader", y luego recorrer los datos
-    # dentro de un bucle y solo acceder a la columna "tornillos"
-    # para cumplir con el enunciado del ejercicio
+    # Paso 1:
+    # Crear un bucle utilizando while que se ejecute de forma infinita
+    # while True.....
+    
+    # Paso 2:
+    # Dentro de ese bucle consultar al usuario por consola
+    # que producto desea agregar al stock
+    #   - Si el usuario ingresa "FIN" como producto se debe 
+    #   finalizar el bucle
+    #   - No debe agregar stock de productos que no estén
+    #   definidos inicialmente en el diccionario stock.
+    #   Para verificar si un producto existe dentro del
+    #   diccionario stock utilice el operador "in" visto en clase
+
+    # Paso 3:
+    # Luego de haber ingresado el producto valido, se debe
+    # ingresar por consola cuanto stock de ese producto se desea agregar.
+    # Si teniamos 20 tornillos y el usuario desea agregar 10 tornillos más,
+    # en nuestro diccionario deben quedar 30 tornillos (debe acumular)
+
+    # Paso 4:
+    # Cuando el usuario ingrese "FIN" y se termine el bucle, debe
+    # imprimir en pantalla con print el diccionario con el stock final
+    # Al final de esta función retornar (return) la variable stock
 
     # Comenzar aquí, recuerde el identado dentro de esta funcion
-    csvfile = open (archivo, 'r')
-    busca_tornillos = list(csv.DictReader(csvfile))
-    
-    suma_tornillos = 0
-    for articulo in busca_tornillos:
-        suma_tornillos += int(articulo['tornillos'])
-    
-    print('El stock de tornillos es:', suma_tornillos)
-    csvfile.close()
 
+    while True:
+        producto = str(input('Ingrese el producto que agrega al stock:'))
+        
+        if producto == 'FIN':
+            break
+        elif producto not in stock:
+            print('El producto ingresado no pertenece al inventario.')
+        else:
+            numero = int(input('Ingrese cantidad del producto:'))
+            stock[producto] += numero
 
-def ej4():
-    print('Ejercicios con archivos CSV 2º')
-    archivo = 'propiedades.csv'
-
-    # Realice un programa que abra el archivo CSV "propiedades.csv"
-    # en modo lectura. Recorrar dicho archivo y contar
-    # la cantidad de departamentos de 2 ambientes y la cantidad
-    # de departamentos de 3 ambientes disponibles.
-    # Al finalizar el proceso, imprima en pantalla los resultados.
-
-    # Tener cuidado que hay departamentos que no tienen definidos
-    # la cantidad de ambientes, verifique el texto no esté vacio
-    # antes de convertirlo a entero con "int( .. )"
-    # NOTA: Si desea investigar puede evitar que el programa explote
-    # utilizando "try except", tema que se verá la clase que viene.
-
-    # Comenzar aquí, recuerde el identado dentro de esta funcion
-    csvfile = open(archivo, 'r')
-    busca_deptos = list(csv.DictReader(csvfile))
-
-    suma_2ambientes = 0
-    suma_3ambientes = 0
-    
-    cantidad_deptos = len(busca_deptos)
-    
-    for departamento in range(cantidad_deptos):
-        row = busca_deptos[departamento]
-        try:
-            cantidad_ambientes = int(row.get('ambientes'))
-            
-            if cantidad_ambientes == 2:
-                suma_2ambientes += 1
-            elif cantidad_ambientes == 3:
-                suma_3ambientes += 1
-        except:
-            continue
-            
-    print('Sobre', cantidad_deptos,'propiedades:')
-    print('Hay', suma_2ambientes, 'departamentos de 2 ambientes.')
-    print('Hay', suma_3ambientes, 'departamentos de 3 ambientes.')
-    csvfile.close()
+    print(stock)
+    return stock
 
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    ej3()
-    ej4()
+    desafio()
