@@ -25,11 +25,11 @@ Enunciado:
 - Ya cuenta con la variable notas
 
 Alumno:
-- Crear una una variable llamada cantidad_examanes
+- Crear una una variable llamada cantidad_examenes
   para almacenar a cuantos exámenes se presentó
   el alumno (debe inicializarla en cero).
   Utilice un bucle e incremente en 1 la variable
-  cantidad_examanes en cada iteración donde la nota
+  cantidad_examenes en cada iteración donde la nota
   sea positiva o cero.
 
 - Crear una una variable llamada cantidad_ausentes
@@ -50,10 +50,10 @@ print("Mi organizador académico (#_#)")
 # Empezar aquí la resolución del ejercicio
 notas = [70, 82, -1, 65, 55, 67, 87, 92, -1]
 
-cantidad_examanes = 0
+cantidad_examenes = 0
 for nota in notas:
     if nota >= 0:
-        cantidad_examanes += 1
+        cantidad_examenes += 1
 
 cantidad_ausentes = 0
 for nota in notas:
@@ -61,13 +61,13 @@ for nota in notas:
         cantidad_ausentes += 1
 
 # Uniendo ambos bucles
-cantidad_examanes = 0
+cantidad_examenes = 0
 cantidad_ausentes = 0
 for nota in notas:
     if nota >= 0:
-        cantidad_examanes += 1
+        cantidad_examenes += 1
     else:
         cantidad_ausentes += 1
 
-print(f"Cantidad de examanes presentados: {cantidad_examanes}")
+print(f"Cantidad de examenes presentados: {cantidad_examenes}")
 print(f"Cantidad de ausentes: {cantidad_ausentes}")
